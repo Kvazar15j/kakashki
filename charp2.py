@@ -1,19 +1,19 @@
 from charp1 import Character
 
 
-player1 = Character('Pudge')
-player1.show_info()
+p1 = Character('Pudge')
+p1.show_info()
 
-player2 = Character('Tidehunter', damage=2)
-print(player2)
+p2 = Character('Tidehunter', damage=2)
+print(p2)
+while p1.is_alive() and p2.is_alive():
+      p1_damage = p1.attack(p2)
+      print(f'{p1.name} атакував {p2.name} '
+            f'і наніс {p1_damage} шкоди.')
+      p2_damage = p2.attack(p1)
+      print(f'{p2.name} атакував {p1.name} '
+            f'і наніс {p2_damage} шкоди.')
 
-p1_damage = player1.attack(player2)
-print(f'{player1.name} атакував {player2.name} '
-      f'і наніс {p1_damage} шкоди.')
-p2_damage = player2.attack(player1)
-print(f'{player2.name} атакував {player1.name} '
-      f'і наніс {p2_damage} шкоди.')
-
-print(player1, player2, sep='\n')
+      print(p1, p2, sep='\n')
 
 
