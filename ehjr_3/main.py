@@ -1,7 +1,8 @@
 from ehjr_2.charp1 import Character
 from berserk import Berserk
+from assasin import Assasin
 
-p1 = Character('Pudge', damage=45, health=670)
+p1 = Assasin('Pudge', damage=45, health=670)
 p1.show_info()
 
 p2 = Berserk('Tidehunter', damage=31, health=714)
