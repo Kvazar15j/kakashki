@@ -1,10 +1,10 @@
 from ehjr_2.charp1 import Character
+from berserk import Berserk
 
-
-p1 = Character('Pudge')
+p1 = Character('Pudge', damage=45, health=670)
 p1.show_info()
 
-p2 = Character('Tidehunter', damage=2)
+p2 = Berserk('Tidehunter', damage=31, health=714)
 print(p2)
 while p1.is_alive() and p2.is_alive():
       p1_damage = p1.attack(p2)
